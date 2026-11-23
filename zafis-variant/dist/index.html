@@ -1,0 +1,131 @@
+<!doctype html>
+<!-- Zafis NOv-1 variant. Layout and scene choreography adapted from Prismic Farbe / mara420/NOv-1 (Apache-2.0). New Czech content, garden geometry and interactions. See CREDITS.md. -->
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dcd8d3">
+  <title>Zafis — Zahrada v rovnováze</title>
+  <meta name="description" content="Voda, život a světlo pro vaši zahradu. Automatická závlaha Hunter, trávníky a zahradní osvětlení. Praha, Beroun a Středočeský kraj.">
+  <meta property="og:title" content="Zafis — Zahrada v rovnováze">
+  <meta property="og:description" content="Automatická závlaha, trávníky a zahradní osvětlení. Od prvního nápadu po sezónní péči.">
+  <meta property="og:image" content="https://zafis-nov1.zafis-420.chatgpt.site/assets/hero.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="js/app.js" defer></script>
+  <script type="module" src="js/garden-scene.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+<header class="site-header">
+  <a class="brand" href="#uvod" aria-label="Zafis — úvod"><svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 0C13 10 0 19 0 26a16 16 0 0 0 32 0C32 18 20 9 16 0Z"/><path d="M6 29c1 6 7 8 11 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>zafis<span class="brand-dot">.</span></a>
+  <span class="header-tag">Zahrady v dobrých rukou</span>
+  <nav aria-label="Hlavní navigace" class="desktop-nav">
+    <a href="#voda">Voda</a><a href="#zivot">Život</a><a href="#svetlo">Světlo</a><a class="nav-contact" href="#kontakt">Probrat zahradu</a>
+  </nav>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu<span aria-hidden="true">+</span></button>
+</header>
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobilní navigace" hidden>
+  <a href="#voda">Voda<span>Automatická závlaha</span></a>
+  <a href="#zivot">Život<span>Trávníky a zeleň</span></a>
+  <a href="#svetlo">Světlo<span>Zahradní osvětlení</span></a>
+  <a href="#kontakt">Kontakt<span>Pojďme se potkat</span></a>
+</nav>
+<div class="scene-shell" aria-hidden="true">
+  <div id="scene-stage"><div class="scene-fallback"><img src="assets/hero.webp" alt="" fetchpriority="high" width="1615" height="1080"></div></div>
+  <div class="scene-caption"><span class="tiny-dot"></span><span id="scene-caption">Živý prostor. Promyšlený do detailu.</span></div>
+  <span class="scene-mark">ZAFIS / ZAHRADNÍ SYSTÉM</span>
+</div>
+<div class="scene-controls" aria-label="Náhled zahrady">
+  <span class="control-label">Prozkoumejte zahradu</span>
+  <div class="mode-switch" role="group" aria-label="Atmosféra 3D zahrady">
+    <button data-mode="water" aria-pressed="true">Voda</button>
+    <button data-mode="life" aria-pressed="false">Život</button>
+    <button data-mode="light" aria-pressed="false">Světlo</button>
+  </div>
+  <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="Pozastavit animace"><span aria-hidden="true">Ⅱ</span></button>
+</div>
+<main id="obsah">
+  <section id="uvod" class="hero scene-section" data-scene-model="intro" data-scene-position="center">
+    <div class="bounded hero-copy">
+      <p class="eyebrow"><span class="tiny-dot"></span> Praha · Beroun · Střední Čechy</p>
+      <h1>Zahrada<br>v rovnováze<span class="green-text">.</span></h1>
+      <p class="intro-text">Voda, která ví kam.<br>Zeleň, která žije.<br>Světlo, které tvoří atmosféru.</p>
+      <p class="hero-note">Navrhujeme a realizujeme zahradní systémy, díky kterým si zahradu prostě užijete.</p>
+      <div class="actions"><a href="#kontakt" class="cta primary">Probrat svou zahradu</a><a href="#voda" class="cta text-link">Objevit řešení</a></div>
+    </div>
+    <div class="hero-bottom"><span>OD NÁVRHU PO SEZÓNNÍ PÉČI</span><a href="#voda">Posuňte se do zahrady <span class="scroll-line" aria-hidden="true"></span></a></div>
+  </section>
+
+  <section id="voda" class="chapter scene-section" data-scene-model="water" data-scene-position="center" data-scene-rotate="true">
+    <div class="bounded chapter-copy reveal">
+      <p class="eyebrow">VODA / AUTOMATICKÁ ZÁVLAHA</p>
+      <h2>Správná kapka.<br>Správné místo.</h2>
+      <p class="lead">Zahrada má svůj rytmus.<br>Závlaha mu rozumí.</p>
+      <p>Navrhneme systém Hunter podle vaší zahrady, zdroje vody a jednotlivých výsadeb. Trávník, záhony i živý plot dostanou vlastní péči.</p>
+      <dl class="specs"><div><dt>Trávník</dt><dd>Výsuvné postřikovače</dd></div><div><dt>Záhony a výsadby</dt><dd>Kapková závlaha</dd></div><div><dt>Ovládání</dt><dd>Automatické řízení</dd></div><div><dt>Po realizaci</dt><dd>Sezónní servis</dd></div></dl>
+      <a class="cta primary" href="#kontakt" data-service="Závlaha">Chci promyslet závlahu</a>
+    </div>
+  </section>
+
+  <section class="picture-section scene-section" data-scene-model="water" data-scene-position="top" aria-label="Závlaha v zahradě">
+    <figure class="picture-main"><div class="image-wrap"><img src="assets/irrigation.webp" loading="lazy" alt="Postřikovač rozptyluje vodu po trávníku v podvečerním slunci" width="807" height="600"></div><figcaption><span>VODA V POHYBU</span><span>Automatická závlaha / Zafis</span></figcaption></figure>
+    <div class="picture-aside"><p class="photo-statement reveal">Méně času<br>s hadicí.<br><em>Více na zahradě.</em></p><figure><div class="image-wrap detail-photo"><img src="assets/detail.webp" loading="lazy" alt="Pečlivé pokládání kapkové závlahy mezi výsadbami" width="1050" height="600"></div><figcaption>Promyšlené i pod povrchem.</figcaption></figure></div>
+  </section>
+
+  <section id="zivot" class="chapter scene-section" data-scene-model="life" data-scene-position="center" data-scene-rotate="true">
+    <div class="bounded chapter-copy reveal">
+      <p class="eyebrow">ŽIVOT / TRÁVNÍKY A ZELEŇ</p>
+      <h2>Dobrá zahrada<br>začíná<br>od země.</h2>
+      <p class="lead">Místo pro bosé nohy.<br>A pro každodenní život.</p>
+      <p>Od přípravy půdy po založení trávníku. Pomůžeme vám vytvořit zelený základ zahrady a navázat péčí, která mu bude svědčit.</p>
+      <dl class="specs"><div><dt>Základ</dt><dd>Příprava terénu</dd></div><div><dt>Realizace</dt><dd>Založení trávníku</dd></div><div><dt>Návaznost</dt><dd>Závlaha na míru</dd></div><div><dt>Péče</dt><dd>Podle potřeb zahrady</dd></div></dl>
+      <a class="cta primary" href="#kontakt" data-service="Trávník a zeleň">Chci zelenější zahradu</a>
+    </div>
+  </section>
+
+  <section class="picture-section life-pictures scene-section" data-scene-model="life" data-scene-position="top" aria-label="Zelený základ zahrady">
+    <figure class="picture-main"><div class="image-wrap"><img src="assets/hero.webp" loading="lazy" alt="Zelený trávník a vzrostlé výsadby u moderního rodinného domu" width="1615" height="1080"></div><figcaption><span>PROSTOR PRO ŽIVOT</span><span>Trávník a zahrada / Zafis</span></figcaption></figure>
+    <div class="picture-aside"><figure><div class="image-wrap detail-photo"><img src="assets/lawn.webp" loading="lazy" alt="Detail zeleného travního koberce při zakládání trávníku" width="890" height="600"></div><figcaption>Každý dobrý výsledek má dobrý základ.</figcaption></figure><p class="photo-statement reveal">Zelená není<br>jen barva.<br><em>Je to pocit.</em></p></div>
+  </section>
+
+  <section id="svetlo" class="chapter scene-section" data-scene-model="light" data-scene-position="center" data-scene-rotate="true">
+    <div class="bounded chapter-copy reveal">
+      <p class="eyebrow">SVĚTLO / ZAHRADNÍ OSVĚTLENÍ</p>
+      <h2>Den končí.<br>Zahrada<br>pokračuje.</h2>
+      <p class="lead">Jiná atmosféra.<br>Stejné oblíbené místo.</p>
+      <p>Světlo vede po cestě, zvýrazní výsadbu a vytvoří prostor pro klidný večer. Navrhneme ho tak, aby zahradě slušelo i po setmění.</p>
+      <dl class="specs"><div><dt>Pohyb</dt><dd>Cesty a vstupy</dd></div><div><dt>Atmosféra</dt><dd>Terasy a posezení</dd></div><div><dt>Detail</dt><dd>Stromy a výsadby</dd></div><div><dt>Výsledek</dt><dd>Světlo v souvislostech</dd></div></dl>
+      <a class="cta primary" href="#kontakt" data-service="Zahradní osvětlení">Chci rozsvítit zahradu</a>
+    </div>
+  </section>
+
+  <section class="night-section scene-section" data-scene-model="light" data-scene-position="top" aria-labelledby="night-title">
+    <div class="night-image"><img src="assets/lighting.webp" alt="Zahradní výsadby a cesty osvětlené teplým světlem po setmění" loading="lazy" width="758" height="600"></div>
+    <div class="night-copy reveal"><p class="eyebrow">JEŠTĚ CHVÍLI ZŮSTAT VENKU.</p><h2 id="night-title">Vaše zahrada.<br>V jiném světle.</h2><a href="#kontakt" class="cta light-cta" data-service="Zahradní osvětlení">Najít správnou atmosféru</a></div>
+  </section>
+
+  <section id="spoluprace" class="process-section scene-section" data-scene-position="top" aria-labelledby="process-title">
+    <div class="section-heading"><p class="eyebrow">JEDEN PARTNER PRO CELOU ZAHRADU</p><h2 id="process-title">Od prvního nápadu<br>po další jaro.</h2></div>
+    <div class="process-list"><details open><summary><span>Projdeme vaši zahradu</span><span class="plus" aria-hidden="true">+</span></summary><p>Probereme, co od zahrady čekáte, jak ji používáte a co potřebuje. Vycházíme z konkrétního místa, vody i vašich plánů.</p></details><details><summary><span>Navrhneme řešení</span><span class="plus" aria-hidden="true">+</span></summary><p>Propojíme závlahu, zeleň nebo světlo do smysluplného celku. Rozsah prací a nabídku si projdeme před realizací.</p></details><details><summary><span>Postaráme se o realizaci</span><span class="plus" aria-hidden="true">+</span></summary><p>Od přípravy až po uvedení do provozu. Ukážeme vám, jak se systém používá a jak se o něj průběžně starat.</p></details><details><summary><span>Zůstaneme v kontaktu</span><span class="plus" aria-hidden="true">+</span></summary><p>Zahrada se mění s ročním obdobím. S navazujícím servisem, spuštěním závlahy a zazimováním nemusíte začínat pokaždé od nuly.</p></details></div>
+  </section>
+
+  <section id="kontakt" class="contact-section scene-section" data-scene-position="top" aria-labelledby="contact-title">
+    <div class="contact-intro"><p class="eyebrow"><span class="tiny-dot"></span> ZAČÍNÁ TO ROZHOVOREM</p><h2 id="contact-title">Co potřebuje<br>vaše zahrada?</h2><p>Napište nám pár slov.<br>Společně najdeme další krok.</p><div class="contact-direct"><a href="tel:+420724388703">+420 724 388 703</a><a href="mailto:info@zafis.cz">info@zafis.cz</a></div><p class="contact-location">Praha · Beroun · Středočeský kraj<br>Košťálkova 1544, 266 01 Beroun</p></div>
+    <form id="contact-form" class="contact-form">
+      <fieldset><legend>Co spolu promyslíme?</legend><div class="service-options"><label><input type="checkbox" name="service" value="Závlaha"><span>Závlaha</span></label><label><input type="checkbox" name="service" value="Trávník a zeleň"><span>Trávník a zeleň</span></label><label><input type="checkbox" name="service" value="Zahradní osvětlení"><span>Osvětlení</span></label><label><input type="checkbox" name="service" value="Servis"><span>Servis</span></label></div></fieldset>
+      <div class="form-row"><label>Vaše jméno<input name="name" autocomplete="name" placeholder="Jméno a příjmení" required maxlength="120"></label><label>E-mail<input name="email" type="email" autocomplete="email" placeholder="vas@email.cz" required maxlength="200"></label></div>
+      <label>Kde je vaše zahrada?<input name="location" autocomplete="address-level2" placeholder="Obec nebo část města" maxlength="160"></label>
+      <label>Co máte v plánu?<textarea name="message" rows="3" placeholder="Nová zahrada, úprava závlahy, světlo u terasy…" required maxlength="3000"></textarea></label>
+      <p class="form-note">Zkušební web: formulář připraví zprávu pro váš e-mailový program. Odešlete ji až v něm.</p>
+      <button class="cta primary" type="submit">Připravit poptávku</button>
+      <div id="form-result" class="form-result" hidden tabindex="-1" aria-live="polite"><h3>Zpráva je připravená.</h3><p>Zkontrolujte text a otevřete ho ve svém e-mailu.</p><pre id="message-preview"></pre><div class="result-actions"><a id="email-draft" class="cta primary" href="mailto:info@zafis.cz">Otevřít e-mail</a><button id="copy-message" class="cta outlined" type="button">Kopírovat text</button></div><p id="copy-status" role="status"></p></div>
+    </form>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-top"><a href="#uvod">Zpět na začátek</a><span>ZÁVLAHA · TRÁVNÍKY · OSVĚTLENÍ</span></div><div class="footer-word" aria-hidden="true">zafis<span>.</span></div><div class="footer-bottom"><span>© <span id="year">2026</span> Zafis</span><span>Každá zahrada má svůj příběh.</span><a href="https://www.zafis.cz/" target="_blank" rel="noopener noreferrer">Současný web Zafis</a></div></footer>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.scene-controls{display:none}.scene-fallback{opacity:1!important}.scene-shell{opacity:.28}#contact-form{display:none}</style><p class="noscript-note">Pro 3D animaci a přípravu poptávky zapněte JavaScript. Kontaktovat nás můžete na info@zafis.cz nebo +420 724 388 703.</p></noscript>
+</body>
+</html>
